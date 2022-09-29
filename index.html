@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sigma landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        margin: 0;
+        overflow: hidden;
+      }
+      .header {
+        margin: 0 auto;
+        display: flex;
+        width: 87%;
+        padding-top: 30px;
+        justify-content: space-between;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .logo {
+        text-decoration: none;
+        color: black;
+
+        font-family: "Noto Sans KR";
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 51px;
+      }
+      .menu-button-container {
+        display: flex;
+      }
+      .header .get-started {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+        height: 40px;
+        background: #f96580;
+        border-radius: 9px;
+      }
+      .header .get-started > div {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        color: white;
+      }
+      .faq {
+        font-family: "Inter";
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+
+        margin-right: 45px;
+        display: flex;
+        align-items: center;
+        height: 40px;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 100px;
+        z-index: 1;
+      }
+      .title {
+        font-family: "Noto Sans KR";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 45px;
+        line-height: 65px;
+        margin-bottom: 40px;
+        color: #322b47;
+      }
+      .desc {
+        font-family: "Noto Sans KR";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 29px;
+        color: #322b47;
+        margin-bottom: 60px;
+      }
+      .container .get-started {
+        border-radius: 10px;
+        width: 160px;
+        height: 50px;
+        background-color: #6427ff;
+        color: white;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .mobile {
+        z-index: -1;
+        position: fixed;
+        bottom: -50%;
+        right: 10%;
+
+        width: 375px;
+        height: 812px;
+
+        border-radius: 40px;
+        filter: drop-shadow(40px 100px 0px #babebe15);
+        /* filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25)); */
+        box-shadow: 45px 50px 20px #babebe2f;
+        background-image: url("img/phone.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .page-container {
+        width: 100vw;
+        height: 100vh;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+      }
+      .basic-container {
+        height: 100vh;
+        scroll-snap-align: start;
+      }
+      .second {
+        padding-top: 20vh;
+        margin-top: 0;
+      }
+      .second > .title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 45px;
+        color: #8f1391;
+      }
+      .purple {
+        background-color: #eae8fe;
+      }
+      .gray {
+        background-color: #f4f8fa;
+      }
+      .white {
+        background-color: white;
+      }
+      .board {
+        z-index: -2;
+        top: 100vh;
+        left: -50vw;
+        position: absolute;
+        width: 200vw;
+        height: 100vh;
+      }
+      .mobile2 {
+        z-index: -1;
+        position: fixed;
+        bottom: -50%;
+        right: 10%;
+
+        width: 375px;
+        height: 812px;
+
+        border-radius: 40px;
+        box-shadow: 45px 50px 20px #babebe2f;
+        background-image: url("img/phone.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+  <body>
+    <div class="mobile"></div>
+    <!-- <div class="mobile2"></div> -->
+    <div class="board purple"></div>
+    <div class="board gray"></div>
+    <div class="board white"></div>
+    <div class="page-container">
+      <div class="basic-container">
+        <div class="header">
+          <a href="#" class="logo">Sigma</a>
+          <div class="menu-button-container">
+            <a href="#" class="faq">FAQ</a>
+            <a href="#" class="get-started"><div>Get started</div></a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="title">
+            대학 공부가 어려울 땐<br />Sigma와 함께 하세요!
+          </div>
+          <div class="desc">
+            Sigma는 대학생 전용 학습 플랫폼입니다
+            <br />
+            모르는 문제가 생겼을 때는 검색을 통해 궁금증을 해결하고,<br />
+            다른 사람들에게 대답하여 자신의 지식을 공유할 수 있어요!
+          </div>
+          <a href="#"><div class="get-started">Get started</div></a>
+        </div>
+      </div>
+      <div class="basic-container">
+        <div class="container second">
+          <div class="title">
+            <div style="font-weight: 400">우리의</div>
+            지식을 기부해봐요!
+          </div>
+          <div class="desc">
+            자신 있는 과목을 골라서 문제를 검새하면
+            <br />
+            사람들의 질문 목록이 나와요<br /><br />
+            답변을 단 후 채택되면 돈으로 환전 가능한<br />
+            포인트를 얻을 수 있답니다
+          </div>
+        </div>
+      </div>
+      <div class="basic-container"></div>
+      <div class="basic-container"></div>
+    </div>
+  </body>
+</html>
