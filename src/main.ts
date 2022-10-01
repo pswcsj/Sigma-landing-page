@@ -2,16 +2,6 @@ import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
-// gsap.from(".second>.title", {
-//   scrollTrigger: {
-//     trigger: ".basic-container:nth-child(2)",
-//     start: "top top",
-//     markers: true,
-//   },
-//   yPercent: 100,
-//   // opacity: 0,
-//   duration: 2,
-// });
 const menuButton = document.querySelector(".menu-button");
 const menuButtonContainer = document.querySelector<HTMLDivElement>(
   ".menu-button-container"
